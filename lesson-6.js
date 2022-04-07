@@ -31,9 +31,9 @@ createBask();
 const cards = document.querySelectorAll('.product');
 let numbPrd = 0;
 let totalPrc = 0;
-function onClick(prdPrc) {
+function onClick(event) {
     numbPrd++;
-    totalPrc = totalPrc + parseInt(prdPrc.currentTarget.innerHTML.match(/\d+/)[0])
+    totalPrc = totalPrc + parseInt(event.currentTarget.innerHTML.match(/\d+/)[0])
     console.log(totalPrc)
     bask.textContent = `В корзине: ${numbPrd} товаров на сумму ${totalPrc} рублей`;
     document.body.append(bask)
